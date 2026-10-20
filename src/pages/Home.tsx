@@ -89,8 +89,8 @@ function Journey() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
             {
-              src: IMAGES.lobbyLounge,
-              alt: "Warmly lit hotel lounge with plush seating",
+              src: `${import.meta.env.BASE_URL}images/hotel-real/luxury-rooms.png`,
+              alt: "Hotel ND Manor guest room with a white bed, warm beige interiors and wooden flooring",
               caption: "Spaces that feel like home",
             },
             {
