@@ -212,11 +212,53 @@ export function Chatbot() {
   ]);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
+  const [launcherPosition, setLauncherPosition] = useState<{ x: number; y: number } | null>(null);
+  const dragRef = useRef<{ pointerX: number; pointerY: number; left: number; top: number } | null>(null);
+  const draggedRef = useRef(false);
   const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, chatOpen, typing]);
+
+  useEffect(() => {
+    const onPointerMove = (event: PointerEvent) => {
+      if (!dragRef.current) return;
+      const dx = event.clientX - dragRef.current.pointerX;
+      const dy = event.clientY - dragRef.current.pointerY;
+      const launcherSize = window.innerWidth >= 768 ? 64 : 56;
+      const x = Math.max(8, Math.min(window.innerWidth - launcherSize - 8, dragRef.current.left + dx));
+      const y = Math.max(8, Math.min(window.innerHeight - launcherSize - 8, dragRef.current.top + dy));
+      if (Math.abs(dx) > 4 || Math.abs(dy) > 4) draggedRef.current = true;
+      setLauncherPosition({ x, y });
+    };
+    const onPointerUp = () => {
+      dragRef.current = null;
+      document.body.style.userSelect = "";
+    };
+    window.addEventListener("pointermove", onPointerMove);
+    window.addEventListener("pointerup", onPointerUp);
+    window.addEventListener("pointercancel", onPointerUp);
+    return () => {
+      window.removeEventListener("pointermove", onPointerMove);
+      window.removeEventListener("pointerup", onPointerUp);
+      window.removeEventListener("pointercancel", onPointerUp);
+    };
+  }, []);
+
+  const startDragging = (event: React.PointerEvent<HTMLDivElement>) => {
+    if ((event.target as HTMLElement).closest("button") === null) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    dragRef.current = {
+      pointerX: event.clientX,
+      pointerY: event.clientY,
+      left: rect.left,
+      top: rect.top,
+    };
+    draggedRef.current = false;
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+    document.body.style.userSelect = "none";
+  };
 
   const reply = (userText: string, bot: Msg, then?: () => void) => {
     setMessages((m) => [...m, { from: "user", text: userText }]);
@@ -377,8 +419,16 @@ export function Chatbot() {
   return (
     <>
       <div
-        className="group fixed right-4 z-[80] flex items-center gap-3 md:right-7"
-        style={{ bottom: "calc(1.15rem + env(safe-area-inset-bottom))" }}
+        onPointerDown={startDragging}
+        className={cn(
+          "group fixed z-[80] flex items-center gap-3 touch-none",
+          launcherPosition ? "" : "right-4 md:right-7"
+        )}
+        style={
+          launcherPosition
+            ? { left: launcherPosition.x, top: launcherPosition.y }
+            : { bottom: "calc(1.15rem + env(safe-area-inset-bottom))" }
+        }
       >
         <span
           className="pointer-events-none translate-x-2 rounded-sm bg-charcoal px-3 py-1.5 text-[0.64rem] font-medium uppercase tracking-[0.2em] text-ivory opacity-0 shadow-lg transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100"
@@ -390,11 +440,17 @@ export function Chatbot() {
           type="button"
           aria-label="Chat with ND Assistant"
           aria-expanded={chatOpen}
-          onClick={() => setChatOpen(!chatOpen)}
+          onClick={() => {
+            if (draggedRef.current) {
+              draggedRef.current = false;
+              return;
+            }
+            setChatOpen(!chatOpen);
+          }}
           className="relative h-14 w-14 overflow-hidden rounded-full border-2 border-gold bg-ivory shadow-[0_8px_24px_rgba(28,26,23,0.28)] transition-transform duration-300 hover:scale-[1.04] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold motion-reduce:transition-none md:h-16 md:w-16"
         >
           <img
-            src="/images/nd-assistant.png"
+            src={`${import.meta.env.BASE_URL}images/nd-assistant.png`}
             alt=""
             className="h-full w-full object-cover object-[center_18%]"
           />
@@ -419,13 +475,32 @@ export function Chatbot() {
         )}
         style={{
           height: "min(32rem, calc(100dvh - 8.75rem - env(safe-area-inset-bottom)))",
-          bottom: "calc(6.35rem + env(safe-area-inset-bottom))",
+          ...(launcherPosition
+            ? {
+                left: Math.max(
+                  8,
+                  Math.min(
+                    launcherPosition.x - 250,
+                    (typeof window !== "undefined" ? window.innerWidth : 1024) - 8 - 320
+                  )
+                ),
+                top: Math.max(
+                  8,
+                  Math.min(
+                    launcherPosition.y - 520,
+                    (typeof window !== "undefined" ? window.innerHeight : 768) - 520
+                  )
+                ),
+                right: "auto",
+                bottom: "auto",
+              }
+            : { bottom: "calc(6.35rem + env(safe-area-inset-bottom))" }),
         }}
         inert={!chatOpen}
       >
         <div className="flex items-center gap-3 border-b border-gold/30 bg-charcoal px-5 py-4 text-ivory">
           <img
-            src="/images/nd-assistant.png"
+            src={`${import.meta.env.BASE_URL}images/nd-assistant.png`}
             alt="ND Assistant, hotel concierge"
             className="h-11 w-11 rounded-full border border-gold/50 object-cover object-[center_18%]"
           />
