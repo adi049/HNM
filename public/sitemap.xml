@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Intended canonical origin: https://ndmanor.com
+  Submit this file only after the domain is connected and HTTPS is working.
+  Routes are hash URLs because the site is a static single-page application.
+  Set DOMAIN_CONNECTED in src/data/seo.ts when the domain is live.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ndmanor.com/#/</loc></url>
+  <url><loc>https://ndmanor.com/#/hotels</loc></url>
+  <url><loc>https://ndmanor.com/#/rooms/deluxe</loc></url>
+  <url><loc>https://ndmanor.com/#/rooms/super-deluxe</loc></url>
+  <url><loc>https://ndmanor.com/#/rooms/royal</loc></url>
+  <url><loc>https://ndmanor.com/#/rooms/family</loc></url>
+  <url><loc>https://ndmanor.com/#/destinations</loc></url>
+  <url><loc>https://ndmanor.com/#/experiences</loc></url>
+  <url><loc>https://ndmanor.com/#/offers</loc></url>
+  <url><loc>https://ndmanor.com/#/weddings</loc></url>
+  <url><loc>https://ndmanor.com/#/contact</loc></url>
+  <url><loc>https://ndmanor.com/#/privacy</loc></url>
+  <url><loc>https://ndmanor.com/#/terms</loc></url>
+</urlset>

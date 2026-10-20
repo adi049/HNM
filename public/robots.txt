@@ -1,0 +1,10 @@
+# Hotel ND Manor
+# Allow crawling of the static site. The app uses hash routes, so page
+# content is served from index.html.
+
+User-agent: *
+Allow: /
+
+# Intended origin: https://ndmanor.com
+# Uncomment only after the domain is connected and HTTPS is working.
+# Sitemap: https://ndmanor.com/sitemap.xml
