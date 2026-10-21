@@ -17,8 +17,8 @@ export default function Offers() {
   return (
     <>
       <PageBanner
-        image={IMAGES.roomDetailArt}
-        alt="Refined hotel bedroom with artwork and soft evening light"
+        image={`${import.meta.env.BASE_URL}images/nd-manor-room-detail.png`}
+        alt="Hotel ND Manor guest room with a white bed and pink lounge chair"
         eyebrow="Offers"
         title="Special Offers"
         intro="Stay packages and room enquiries for any time of year. Published room tariffs are separate. No discount is shown unless the hotel has confirmed one."
@@ -33,7 +33,7 @@ export default function Offers() {
                 <article className="overflow-hidden border border-charcoal/10 bg-ivory">
                   <div className="aspect-[21/9] overflow-hidden">
                     <img
-                      src={offer.image}
+                      src={offer.image.startsWith("http") ? offer.image : `${import.meta.env.BASE_URL}${offer.image.replace(/^\//, "")}`}
                       alt={`${offer.title} — representative room photograph`}
                       loading="lazy"
                       className="h-full w-full object-cover"
