@@ -33,7 +33,7 @@ export const IMAGES = {
   roomDeluxe:
     "https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
   roomSuperDeluxe: `${import.meta.env.BASE_URL}images/nd-manor-guest-room.png`,
-  roomRoyal: `${import.meta.env.BASE_URL}images/nd-manor-room-wide.png`,
+  roomRoyal: `${import.meta.env.BASE_URL}images/royal-suite-bathtub-user.png`,
   roomDetailBeige:
     "https://images.pexels.com/photos/7546281/pexels-photo-7546281.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
   roomDetailArt: `${import.meta.env.BASE_URL}images/nd-manor-room-detail.png`,
