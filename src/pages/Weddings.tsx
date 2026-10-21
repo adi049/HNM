@@ -53,8 +53,8 @@ export default function Weddings() {
           <div className="relative mx-auto w-full max-w-xl pb-10 pr-10 md:pb-12 md:pr-12">
             <div className="aspect-[4/3] overflow-hidden">
               <img
-                src={IMAGES.ndLuxuryRooms}
-                alt="Hotel ND Manor's elegant lounge with chandeliers and plush seating"
+                src={IMAGES.ndIndoorBanquet}
+                alt="Hotel ND Manor indoor banquet hall with chandeliers and plush seating"
                 className="h-full w-full object-cover"
                 fetchPriority="high"
               />
@@ -62,8 +62,8 @@ export default function Weddings() {
             <div className="absolute bottom-0 right-0 w-[43%] border-[5px] border-ivory shadow-xl">
               <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/nd-manor-celebration-exterior.png`}
-                  alt="Outdoor celebration terrace decorated with warm string lights and lanterns"
+                  src={IMAGES.exteriorNight}
+                  alt="Hotel ND Manor celebration terrace illuminated with warm string lights and lanterns"
                   className="h-full w-full object-cover"
                   loading="lazy"
                 />
