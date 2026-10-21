@@ -201,29 +201,29 @@ const SHOWCASE = [
   {
     title: "Hotel Exterior",
     text: "First impressions of the Manor — understated, welcoming, distinctly Doon.",
-    image: IMAGES.exteriorDusk,
-    alt: "Elegant hotel facade glowing at dusk",
+    image: `${import.meta.env.BASE_URL}images/nd-manor-exterior.png`,
+    alt: "Hotel ND Manor exterior at night with warm architectural lighting",
     to: "/destinations",
   },
   {
     title: "Luxury Interiors",
     text: "Warm light, considered detail and spaces made for lingering.",
-    image: IMAGES.lobbyFoyer,
-    alt: "Grand hotel foyer with staircase and chandelier",
+    image: `${import.meta.env.BASE_URL}images/nd-manor-luxury-interiors.png`,
+    alt: "Hotel ND Manor luxury interior with chandeliers and elegant seating",
     to: "/hotels",
   },
   {
     title: "Guest Rooms",
     text: "Four categories of quiet comfort, kept immaculately every day.",
-    image: IMAGES.roomSuperDeluxe,
-    alt: "Spacious guest room with tufted headboard and soft lighting",
+    image: `${import.meta.env.BASE_URL}images/nd-manor-guest-room.png`,
+    alt: "Hotel ND Manor guest room with a white bed and warm interiors",
     to: "/hotels",
   },
   {
     title: "Indoor Banquet Hall",
     text: "An elegant indoor venue for celebrations of every scale.",
-    image: IMAGES.banquetHall,
-    alt: "Grand indoor banquet hall dressed for a reception",
+    image: `${import.meta.env.BASE_URL}images/nd-manor-banquet.png`,
+    alt: "Hotel ND Manor banquet hall arranged for events",
     to: "/weddings",
   },
   {
@@ -236,8 +236,8 @@ const SHOWCASE = [
   {
     title: "Hotel Experiences",
     text: "Films and moments from life at the Manor.",
-    image: IMAGES.lobbyLounge,
-    alt: "Hotel lounge with plush seating and ambient lighting",
+    image: `${import.meta.env.BASE_URL}images/nd-manor-interior-wide.png`,
+    alt: "Warmly lit interior at Hotel ND Manor",
     to: "/experiences",
   },
 ];
@@ -300,8 +300,8 @@ const EXPLORE = [
   {
     title: "Weddings",
     text: "Celebrations hosted with grace in our indoor hall.",
-    image: IMAGES.weddingTable,
-    alt: "Wedding table setting with gold accents and florals",
+    image: `${import.meta.env.BASE_URL}images/nd-manor-restaurant.png`,
+    alt: "Hotel ND Manor restaurant with green chairs and warm golden lighting",
     to: "/weddings",
   },
   {
