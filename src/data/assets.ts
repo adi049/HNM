@@ -53,8 +53,7 @@ export const IMAGES = {
   weddingTable: `${import.meta.env.BASE_URL}images/nd-manor-restaurant.png`,
   weddingGold:
     "https://images.pexels.com/photos/34278804/pexels-photo-34278804.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-  weddingCouple:
-    "https://images.pexels.com/photos/27825196/pexels-photo-27825196.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+  weddingCouple: `${import.meta.env.BASE_URL}images/nd-manor-wedding.png`,
   conferenceRoom:
     "https://images.pexels.com/photos/31107325/pexels-photo-31107325.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
   eventSetup:
