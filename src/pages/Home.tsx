@@ -301,7 +301,7 @@ const EXPLORE = [
     title: "Weddings",
     text: "Celebrations hosted with grace in our indoor hall.",
     image: `${import.meta.env.BASE_URL}images/hotel-real/indoor-banquet.png`,
-    alt: "Hotel ND Manor restaurant with green chairs and warm golden lighting",
+    alt: "Hotel ND Manor banquet hall filled with guests during a celebration",
     to: "/weddings",
   },
   {
