@@ -48,13 +48,44 @@ export default function Weddings() {
 
   return (
     <>
-      <PageBanner
-        image={IMAGES.banquetTables}
-        alt="Luxurious banquet table arrangement with gold accents, seen from above"
-        eyebrow="Weddings · Banquets · Events"
-        title="Celebrate Your Special Moments"
-        intro="A 4,000 sq. ft. indoor banquet hall and a conference hall in Dehradun, with a DJ available on request. Guest capacity is confirmed by the hotel."
-      />
+      <section className="bg-ivory pt-20 md:pt-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-14 md:px-8 md:py-16">
+          <div className="relative mx-auto w-full max-w-xl pb-10 pr-10 md:pb-12 md:pr-12">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src={IMAGES.ndLuxuryRooms}
+                alt="Hotel ND Manor's elegant lounge with chandeliers and plush seating"
+                className="h-full w-full object-cover"
+                fetchPriority="high"
+              />
+            </div>
+            <div className="absolute bottom-0 right-0 w-[43%] border-[5px] border-ivory shadow-xl">
+              <div className="aspect-[3/4] overflow-hidden">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/nd-manor-celebration-exterior.png`}
+                  alt="Outdoor celebration terrace decorated with warm string lights and lanterns"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="py-4 md:py-8">
+            <Eyebrow>Weddings · Banquets · Events</Eyebrow>
+            <h1 className="mt-5 font-serif text-4xl leading-tight text-charcoal md:text-6xl">
+              Celebrate Your Special Moments
+            </h1>
+            <GoldDivider className="mx-0 mt-7" />
+            <p className="mt-7 max-w-2xl text-sm font-light leading-[1.9] text-stone-warm md:text-base">
+              From intimate engagements to grand wedding receptions, our indoor banquet hall sets a graceful stage for the days you'll remember forever. Our events team plans every detail with you, from décor and flow to the little touches that make it yours.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="#enquiry" className={buttonStyles.solidDark}>Plan Your Event</a>
+              <a href={whatsappLink(`Hello ${HOTEL.name}, I would like to enquire about hosting an event at your banquet hall.`)} target="_blank" rel="noopener noreferrer" className={buttonStyles.outlineDark}>Event Enquiry</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-pearl py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
