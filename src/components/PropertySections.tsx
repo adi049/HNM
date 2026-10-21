@@ -70,7 +70,7 @@ export function WhatWeOffer() {
       text: "Eighteen rooms across Deluxe, Super Deluxe with balcony, Royal Suite with bathtub and Family categories. Choose EP, CP or MAP when you enquire. Final availability is confirmed by the hotel.",
       to: "/hotels",
       cta: "View Rooms",
-      image: `${import.meta.env.BASE_URL}images/nd-manor-room-wide.png`,
+      image: `${import.meta.env.BASE_URL}images/nd-manor-room-detail.png`,
       alt: "Hotel ND Manor guest room with a dressed bed and warm wooden flooring",
     },
     {
@@ -78,7 +78,7 @@ export function WhatWeOffer() {
       text: "A 4,000 sq. ft. banquet hall and a conference hall for weddings and gatherings. A DJ is available on request. Capacity and arrangements are confirmed with our events team.",
       to: "/weddings?type=Wedding#enquiry",
       cta: "Enquire About Your Event",
-      image: `${import.meta.env.BASE_URL}images/nd-manor-banquet.png`,
+      image: `${import.meta.env.BASE_URL}images/nd-manor-room-wide.png`,
       alt: "Hotel ND Manor banquet hall prepared for celebrations",
     },
     {
@@ -86,7 +86,7 @@ export function WhatWeOffer() {
       text: "The on-site restaurant serves Indian cuisine in a family-friendly setting with a traditional and modern feel. Ask the hotel about dining times and any event menus.",
       to: "/contact",
       cta: "Restaurant Enquiry",
-      image: `${import.meta.env.BASE_URL}images/nd-manor-restaurant.png`,
+      image: `${import.meta.env.BASE_URL}images/nd-manor-celebration-restaurant.png`,
       alt: "Hotel ND Manor restaurant with green chairs and golden lights",
       whatsapp: "Hello Hotel ND Manor, I would like to enquire about the restaurant.",
     },
