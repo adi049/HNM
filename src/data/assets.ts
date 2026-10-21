@@ -14,20 +14,16 @@
 
 export const IMAGES = {
   // Genuine Hotel ND Manor photographs supplied by the hotel team.
-  ndLuxuryRooms: "/images/hotel-real/luxury-rooms.png",
-  ndIndoorBanquet: "/images/hotel-real/indoor-banquet.png",
+  ndLuxuryRooms: "/images/nd-manor-room-wide.png",
+  ndIndoorBanquet: "/images/nd-manor-banquet.png",
   ndConferenceMeeting: "/images/hotel-real/conference-meeting.png",
   // — Exterior & arrival —
-  exteriorDusk:
-    "https://images.pexels.com/photos/36488760/pexels-photo-36488760.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-  exteriorNight:
-    "https://images.pexels.com/photos/30619805/pexels-photo-30619805.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+  exteriorDusk: "/images/nd-manor-exterior.png",
+  exteriorNight: "/images/nd-manor-exterior-evening.png",
 
   // — Lobby & interiors —
-  lobbyLounge:
-    "https://images.pexels.com/photos/19689227/pexels-photo-19689227.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-  lobbyFoyer:
-    "https://images.pexels.com/photos/14011664/pexels-photo-14011664.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+  lobbyLounge: "/images/nd-manor-interior-wide.png",
+  lobbyFoyer: "/images/nd-manor-luxury-interiors.png",
   lobbyReception:
     "https://images.pexels.com/photos/14036253/pexels-photo-14036253.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
   corridor:
@@ -36,13 +32,11 @@ export const IMAGES = {
   // — Rooms —
   roomDeluxe:
     "https://images.pexels.com/photos/2736388/pexels-photo-2736388.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-  roomSuperDeluxe:
-    "https://images.pexels.com/photos/6920603/pexels-photo-6920603.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-  roomRoyal: "/images/royal-suite-bathtub-user.png",
+  roomSuperDeluxe: "/images/nd-manor-guest-room.png",
+  roomRoyal: "/images/nd-manor-room-wide.png",
   roomDetailBeige:
     "https://images.pexels.com/photos/7546281/pexels-photo-7546281.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-  roomDetailArt:
-    "https://images.pexels.com/photos/6434592/pexels-photo-6434592.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+  roomDetailArt: "/images/nd-manor-room-detail.png",
   roomBedDetail:
     "https://images.pexels.com/photos/2736384/pexels-photo-2736384.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
 
@@ -53,12 +47,10 @@ export const IMAGES = {
     "https://images.pexels.com/photos/7820616/pexels-photo-7820616.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
 
   // — Banquets, weddings & events —
-  banquetHall:
-    "https://images.pexels.com/photos/4717550/pexels-photo-4717550.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+  banquetHall: "/images/nd-manor-banquet.png",
   banquetTables:
     "https://images.pexels.com/photos/4717549/pexels-photo-4717549.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-  weddingTable:
-    "https://images.pexels.com/photos/4717555/pexels-photo-4717555.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+  weddingTable: "/images/nd-manor-restaurant.png",
   weddingGold:
     "https://images.pexels.com/photos/34278804/pexels-photo-34278804.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
   weddingCouple:
