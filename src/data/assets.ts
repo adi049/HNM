@@ -15,11 +15,11 @@
 export const IMAGES = {
   // Genuine Hotel ND Manor photographs supplied by the hotel team.
   ndLuxuryRooms: `${import.meta.env.BASE_URL}images/nd-manor-room-wide.png`,
-  ndIndoorBanquet: `${import.meta.env.BASE_URL}images/nd-manor-banquet.png`,
+  ndIndoorBanquet: "https://raw.githubusercontent.com/adi049/HNM/main/public/images/nd-manor-banquet.png",
   ndConferenceMeeting: `${import.meta.env.BASE_URL}images/hotel-real/conference-meeting.png`,
   // — Exterior & arrival —
   exteriorDusk: `${import.meta.env.BASE_URL}images/nd-manor-exterior.png`,
-  exteriorNight: `${import.meta.env.BASE_URL}images/nd-manor-exterior-evening.png`,
+  exteriorNight: "https://raw.githubusercontent.com/adi049/HNM/main/public/images/nd-manor-celebration-exterior.png",
 
   // — Lobby & interiors —
   lobbyLounge: `${import.meta.env.BASE_URL}images/nd-manor-interior-wide.png`,
